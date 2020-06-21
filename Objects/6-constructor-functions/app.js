@@ -1,7 +1,7 @@
 // Blue Print
-// Factory Functions and Constructor Functions
-// Constructor Functions
-// new - creates new object, points to it, omit return
+// Constructor Functions use capitalisation in naming functions
+// Constructor Functions use this keyword
+// new - creates new object, points to it, omit explicit return
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -10,13 +10,16 @@ function Person(firstName, lastName) {
     console.log(
       `My full name is ${this.firstName} ${this.lastName} and I love React`
     );
-  };
-  console.log(this);
+  }
+  console.log(this)
 }
-const john = new Person('john', 'anderson');
+
+const john = new Person("john", "anderson");
 john.fullName();
-const bob = new Person('bob', 'jordan');
-bob.fullName();
+const peter = new Person("peter", "sanders");
+peter.fullName();
+const bob = new Person("bob", "jordan");
+
 
 function createPerson(firstName, lastName) {
   return {

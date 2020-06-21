@@ -3,8 +3,9 @@
 // dot notation vs bracket notation
 
 const age = 40;
-let random = 'random-value';
+let random = 'random-value'
 random = 'age';
+
 const person = {
   name: 'john',
   age: age,
@@ -24,12 +25,12 @@ const person = {
     },
   },
   'random-value': 'random',
+  random: random
 };
-
-console.log(person.job.title);
+console.log(person.job);
+console.log(person.job.company);
+console.log(person.job.company.name);
 console.log(person.job.company.address);
-console.log(person);
-console.log(person['name']);
+console.log(person.age);
 console.log(person['random-value']);
-
-console.log(person[random]);
+console.log(person['random']);

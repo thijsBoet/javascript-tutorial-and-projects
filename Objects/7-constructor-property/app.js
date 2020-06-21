@@ -13,14 +13,18 @@ function Person(firstName, lastName) {
 }
 
 const john = new Person('john', 'sanders');
-// console.log(john.constructor);
+// returns constructor function
+console.log(john.constructor);
 
 const bob = {};
+// object constructor
 console.log(bob.constructor);
 const list = [];
+// array constructor
 console.log(list.constructor);
 const sayHi = function () {};
+// function constructor
 console.log(sayHi.constructor);
-
+// by invoking john's new Person constructor function we can still refer to the fullName method
 const susy = new john.constructor('susy', 'carpenter');
 susy.fullName();
