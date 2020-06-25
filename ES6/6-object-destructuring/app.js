@@ -12,14 +12,9 @@ const bob = {
   },
 };
 
-const {
-  first: firstName,
-  last,
-  city,
-  zip,
-  siblings: { sister: favoriteSibling },
-} = bob;
-console.log(firstName, last, city, zip, favoriteSibling);
+// Assign variable names and unpack items from object
+const { first: firstName, last, city, siblings: { sister: favoriteSibling }} = bob;
+console.log(firstName, last, city, favoriteSibling);
 
 // const firstName = bob.first;
 // const lastName = bob.last;

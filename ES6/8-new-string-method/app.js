@@ -9,7 +9,7 @@ console.log(person.startsWith('Pet'));
 console.log(person.startsWith('peter'));
 
 // ends width
-console.log(employee.startsWith('EMP', 6));
+console.log(employee.startsWith("EMP-PETER-SMITH", 6));
 console.log(manager.endsWith('DOE'));
 console.log(manager.endsWith('MAN', 9));
 // includes
