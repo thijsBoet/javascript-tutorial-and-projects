@@ -1,20 +1,20 @@
 // for of - loops through the values of an iterable object
-// String, Array,Map,Set etc  - NOT OBJECT
-// unlike forEach - we can use break, continue
+// String, Array, Map, Set etc  - NOT OBJECT
 
 const fruits = ['apple', 'orange', 'banana', 'peach'];
 const longName = 'John Smith Pepper III';
 let shortName = '';
 
 for (const letter of longName) {
-  // console.log(letter);
-  if (letter === ' ') {
+  console.log(letter);
+  // unlike forEach - we can use break, continue
+  if (letter === " ") {
     continue;
   } else {
     shortName += letter;
   }
 }
-// console.log(shortName);
+console.log(shortName);
 
 for (const fruit of fruits) {
   if (fruit === 'banana') {
