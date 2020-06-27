@@ -6,7 +6,7 @@
 // add onion boil for 5 min
 // BROWSER!!!!! Fetch Data, Get Geolocation, setTimeout, setTimer etc
 
-boilWater(100000);
+boilWater(10000);
 console.log(`chop carrot`);
 boilWater(5000);
 console.log(`chop onion`);

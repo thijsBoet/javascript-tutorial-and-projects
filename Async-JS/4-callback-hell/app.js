@@ -10,19 +10,20 @@
 boilWater();
 console.log(`chop carrot`);
 
-function boilWater() {
-  console.log('boiling...');
+function boilWater(time) {
+  console.log("boiling...");
   setTimeout(() => {
-    console.log('done.');
-    console.log('add carrots.');
+    console.log("water boiling");
+    console.log("add carrots.")
     setTimeout(() => {
-      console.log('carrots done');
-      console.log('add onions');
-
+      console.log("carrots done");
+      console.log("add onions");
       setTimeout(() => {
-        console.log('onion done');
-      }, 500);
-    }, 500);
-    console.log('chop onion');
+        console.log("onions done");
+        console.log("serve dish");
+      }, 1000)
+    }, 1000);
+    console.log("chop onion");
   }, 1000);
 }
+

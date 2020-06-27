@@ -5,10 +5,11 @@ const heading3 = document.querySelector('.three');
 const btn = document.querySelector('.btn');
 const container = document.querySelector('.img-container');
 const url = 'https://source.unsplash.com/random';
+
 btn.addEventListener('click', () => {
   loadImage(url)
-    .then((taco) => container.appendChild(taco))
-    .catch((err) => console.log(err));
+    .then(data => container.appendChild(data))
+    .catch(err => console.log(err));
 });
 
 function loadImage(url) {

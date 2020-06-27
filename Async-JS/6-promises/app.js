@@ -1,5 +1,5 @@
 // callbacks, promises, async/await
-// PROMISES - Pending, Resolved, Rejected
+
 // then catch - pass another callback
 const heading1 = document.querySelector('.one');
 const heading2 = document.querySelector('.two');
@@ -9,18 +9,24 @@ const btn = document.querySelector('.btn');
 
 btn.addEventListener('click', () => {});
 
+// PROMISES - Pending, Resolved, Rejected
 const promise = new Promise((resolve, reject) => {
-  let value = false;
+  let value = true;
   if (value) {
-    resolve([1, 2, 4]);
+    resolve('hey value is true');
   } else {
     reject(`there was a error, value is false`);
   }
 });
+
+// Use .then to access Resolved value
 promise
-  .then((taco) => {
-    console.log(taco);
+  .then((data) => {
+    console.log(data);
   })
+// Use .catch to access Rejected value
   .catch((err) => {
     console.log(err);
   });
+
+console.log(promise);

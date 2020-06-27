@@ -1,5 +1,5 @@
 // Javascript is single threaded, synchronous language.
-//
+// Everything is executed line, by line, by line like a book
 console.log(`i'm first`);
 console.log(`i'm second`);
 console.log(`i'm third`);
