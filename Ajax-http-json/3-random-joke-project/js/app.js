@@ -24,4 +24,4 @@ mainBtn.addEventListener('click', function(){
   }
 
   ajax.send();
-})
+});
