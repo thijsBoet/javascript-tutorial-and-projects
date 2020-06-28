@@ -1,0 +1,11 @@
+{
+  "cartInfo": {
+    "name":"shopping cart",
+    "store":"grocery store"
+  },
+  "cartItem":[
+    {"id":1, "name":"apple", "price": 0.99},
+    {"id":2, "name":"banana", "price": 0.79},
+    {"id":3, "name":"orange", "price": 1.99}
+  ]
+}
