@@ -1,33 +1,17 @@
 // callbacks, promises, async/await
-// must have async
-// await waits till promise is settled
-// error handling - try/catch
-
-// async function someFunction (){
-//   await
-// }
-// const otherFunction = async() =>{
-//   await
-// }
-
+// what if no resolve, one is rejected
 const heading1 = document.querySelector('.one');
 const heading2 = document.querySelector('.two');
 const heading3 = document.querySelector('.three');
 const btn = document.querySelector('.btn');
 
-btn.addEventListener('click', async () => {
-  await displayColor();
+btn.addEventListener('click', () => {
+  addColor(1000, heading1, "red")
+    .then(() => addColor(2000, heading2, "green"))
+    .then(() => addColor(3000, heading3, "blue"))
+    .catch((err) => console.log(err)
+    );
 });
-
-async function displayColor() {
-  try {
-    await addColor(1000, heading1, "blue");
-    await addColor(1000, heading2, "green");
-    await addColor(1000, heading3, "red");
-  } catch (error) {
-    console.error(error)
-  }
-}
 
 function addColor(time, element, color) {
   return new Promise((resolve, reject) => {
