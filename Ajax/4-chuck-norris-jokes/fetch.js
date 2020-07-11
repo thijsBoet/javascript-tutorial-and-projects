@@ -15,6 +15,7 @@ const fetchJoke = () => {
   fetch(url)
     .then(data => data.json())
     .then(response => displayData(response))
+    .catch(err => console.error(err))
 };
 
 const getUrl = () => {
@@ -23,26 +24,26 @@ const getUrl = () => {
     : (url = `https://api.chucknorris.io/jokes/random`);
 };
 
-const getData = (url) => {
-  return new Promise((resolve, reject) => {
-    ajax = new XMLHttpRequest();
-    ajax.open("GET", url, true);
-    ajax.send();
-    ajax.onreadystatechange = function () {
-      if (ajax.readyState !== 4) return;
-      if (ajax.status === 200) {
-        resolve(ajax.responseText);
-      } else {
-        reject({
-          status: ajax.status,
-          text: ajax.statusText,
-        });
-      }
-    };
-  });
-};
-
-const displayData = (data) => {
-  const { value: joke } = data;
+const displayData = ({ value: joke }) => {
   content.textContent = joke;
 };
+
+
+// const getData = (url) => {
+//   return new Promise((resolve, reject) => {
+//     ajax = new XMLHttpRequest();
+//     ajax.open("GET", url, true);
+//     ajax.send();
+//     ajax.onreadystatechange = function () {
+//       if (ajax.readyState !== 4) return;
+//       if (ajax.status === 200) {
+//         resolve(ajax.responseText);
+//       } else {
+//         reject({
+//           status: ajax.status,
+//           text: ajax.statusText,
+//         });
+//       }
+//     };
+//   });
+// };
