@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Open+Sans&family=Roboto:wght@400;700&display=swap');
 
 /*
 =============== 
@@ -42,9 +42,12 @@ Variables
   --clr-red-light: hsl(360, 71%, 66%);
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
+  --clr-orange: #ffa500;
+  --clr-orange-dark: #FF6B0D;
+  --clr-grey-light: #324d67;
   --clr-black: #222;
-  --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Open Sans', sans-serif;
+  --ff-primary: 'Roboto', cursive;
+  --ff-secondary: 'Modak', cursive;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -67,7 +70,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -84,17 +87,19 @@ h1,
 h2,
 h3,
 h4 {
+  color: var(--clr-grey-light);
+  font-family:var(--ff-secondary);
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
 }
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+  color: var(--clr-orange);
 }
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 h3 {
   font-size: 1.25rem;
@@ -200,12 +205,26 @@ p {
   margin: 0 auto;
 }
 
+input, select, textarea{
+  text-align: center;
+  color: var(--clr-grey-light);
+  font-family: var(--ff-secondary);
+}
+
+::-webkit-input-placeholder, ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder, ::-moz-selection, ::selection {
+  text-align: center;
+  color: var(--clr-grey-light);
+  font-family: var(--ff-secondary);
+  opacity: 1;
+}
+
 input {
   width: 100%;
-  font-size: 1rem;
-  border-color: transparent;
+  font-size: 2rem;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
+  border: 0px solid;
+  font: ;
 }
 input {
   border-radius: var(--radius);
@@ -221,6 +240,7 @@ input::placeholder {
 }
 .title {
   font-size: 2rem;
+  color: var(--clr-orange-dark);
   text-align: center;
 }
 
