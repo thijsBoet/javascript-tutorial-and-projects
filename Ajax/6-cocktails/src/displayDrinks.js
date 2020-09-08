@@ -13,7 +13,7 @@ const displayDrinks = ({drinks}) => {
   const newDrinks = drinks
     .map(drink => {
       const { idDrink:id, strDrink:name, strDrinkThumb:image, }  = drink;
-      return `<a href="https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}">
+      return `<a href="./drink.html">
               <article class="cocktail" data-id="${id}">
                 <img src="${image}" alt="${name}" class="cocktail-img">
                 <h3>${name}</h3>

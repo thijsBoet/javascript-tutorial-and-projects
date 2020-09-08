@@ -1,4 +1,4 @@
-import {showLoading} from './toggleLoading.js';
+import { showLoading } from './toggleLoading.js';
 
 const fetchDrinks = async (url) => {
   showLoading();
@@ -7,7 +7,7 @@ const fetchDrinks = async (url) => {
     const data = await response.json();
     return data;
   } catch(error) {
-    console.error(error)
+    console.log(error);
   }
 };
 
